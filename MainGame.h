@@ -7,14 +7,17 @@
 #include "InputManager.h"
 #include "Camera2D.h"
 #include <vector>
+#include "GLTexture.h"
+#include <glm/glm.hpp>
 using namespace std;
 enum class GameState {
 	PLAY,EXIT
 };
-
 class MainGame
 {
 private:
+	GLTexture _tex1, _tex2, _tex3, _tex4;
+	glm::vec2 _pos1, _pos2, _pos3, _pos4;
 	int witdh;
 	int height;
 	InputManager inputManager;

@@ -1,4 +1,7 @@
 #include "MainGame.h"
+#include <cstdlib>
+#include <ctime>
+#include "ImageLoader.h"
 
 
 
@@ -36,6 +39,16 @@ void MainGame::init()
 	}
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	glClearColor(0.0f, 0.4f, 1.0f, 1.0f);
+
+	_tex1 = ImageLoader::loadPNG("Images/img1.png");
+	_tex2 = ImageLoader::loadPNG("Images/img2.png");
+	_tex3 = ImageLoader::loadPNG("Images/img3.png");
+	_tex4 = ImageLoader::loadPNG("Images/img4.png");
+
+	_pos1 = glm::vec2(650,450);
+	_pos2 = glm::vec2(20,450);
+	_pos3 = glm::vec2(680,50);
+	_pos4 = glm::vec2(50,50);
 	initShaders();
 }
 
