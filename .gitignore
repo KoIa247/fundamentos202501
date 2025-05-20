@@ -21,8 +21,6 @@ out*/
 *.obj
 *.o
 *.exe
-*.dll
-*.lib
 *.app
 *.out
 *.a
